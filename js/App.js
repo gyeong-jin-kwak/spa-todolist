@@ -50,10 +50,14 @@ export class App {
           })
           this.setState(nextState)
         },
-        removeTodoItem: () => {
+        removeTodoItem: (itemIndex) => {
           // review2 : mutable -> immutable
           // review2-2 : index 값만으로 비교
-          const nextState = this.state.filter((target, index) => index)
+
+          const nextState = this.state.filter(
+            (target) => target !== this.state[itemIndex]
+          )
+          // const nextState = this.state.filter((target, index) => index)
 
           this.setState(nextState)
         },

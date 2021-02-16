@@ -53,7 +53,7 @@ class TodoList {
       if (e.target.className === 'todo-item') {
         this.toggleTodoItem(itemId)
       } else if (e.target.className === 'delete-btn') {
-        this.removeTodoItem()
+        this.removeTodoItem(itemId)
       }
     })
   }
